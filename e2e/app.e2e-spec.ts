@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('retro-samuria App', () => {
+describe('nitro-samuria App', () => {
   let page: AppPage;
 
   beforeEach(() => {
