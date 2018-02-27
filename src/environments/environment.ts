@@ -4,5 +4,17 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: true,
+
+    // Initialize Firebase
+  firebase: {
+    apiKey: "AIzaSyBl_nMxgOQh4fCkixstzYpvEWVhs4WC7og",
+    authDomain: "nitro-samurai.firebaseapp.com",
+    databaseURL: "https://nitro-samurai.firebaseio.com",
+    projectId: "nitro-samurai",
+    storageBucket: "nitro-samurai.appspot.com",
+    messagingSenderId: "870754973021"
+  }
+
 };
+
