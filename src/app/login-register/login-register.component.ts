@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import React from 'react';
 import {Tabs, Tab} from 'material-ui/Tabs';
+import SwipeableViews from 'react-swipeable-views';
 
 @Component({
   selector: 'app-login-register',
