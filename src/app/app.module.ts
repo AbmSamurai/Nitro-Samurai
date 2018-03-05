@@ -4,12 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {AmChartsModule} from '@amcharts/amcharts3-angular'
+import { AmChartsModule } from '@amcharts/amcharts3-angular'
 import { environment } from '../environments/environment';
 import { LoginRegisterComponent } from './login-register/login-register.component';
 import { LoginComponent } from './Login-Register/login/login.component';
 import { RegisterComponent } from './Login-Register/register/register.component';
-
+import { MatTabsModule } from '@angular/material/tabs';
+import { CdkTableModule } from '@angular/cdk/table';
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
+import {ErrorStateMatcher} from '@angular/material/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,14 +23,26 @@ import { RegisterComponent } from './Login-Register/register/register.component'
     LoginComponent,
     RegisterComponent
   ],
+
+  // exports: [CdkTableModule,
+  //   MatTabsModule],
+
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AmChartsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTabsModule,
+    CdkTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule, ReactiveFormsModule,
+    // ShowOnDirtyErrorStateMatcher
+    
+    
   ],
-  providers: [],
+  providers: [{provide: ErrorStateMatcher}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

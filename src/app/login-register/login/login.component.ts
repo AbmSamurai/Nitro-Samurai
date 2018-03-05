@@ -1,15 +1,44 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
 
+
+// export class LoginComponent implements OnInit {
+
+//   constructor() { }
+
+//   ngOnInit() {
+//   }
+
+// }
+
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
+
+/** @title Input with a custom ErrorStateMatcher */
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
 
-  constructor() { }
+  passwordFormControl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(8)
+    ]
+  ]);
 
-  ngOnInit() {
-  }
-
+  matcher = new MyErrorStateMatcher();
+  passMatcher = new MyErrorStateMatcher();
 }
+
+
