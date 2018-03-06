@@ -2,13 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
+import { MaterialDesignModule } from './material-design/material-design.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopNavigationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MaterialDesignModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
