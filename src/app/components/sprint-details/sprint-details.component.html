@@ -1,0 +1,33 @@
+<div class="container">
+
+<div class="row _headings">
+<!-- //-md-6 col-xl-6 col-sm-6 col-xs-6 -->
+    <div class="col align-self-start">Sprint</div>
+    <div class="col offset-md-3">Previous Sprint</div>
+  <div class="w-100"></div>
+    <div class="col">
+       <mat-form-field>
+         <input matInput placeholder="Sprint Points">
+       </mat-form-field>
+   
+        <mat-form-field>
+          <input matInput [matDatepicker]="Start" placeholder="Sprint Start">
+          <mat-datepicker-toggle matSuffix [for]="Start"></mat-datepicker-toggle>
+          <mat-datepicker #Start></mat-datepicker>
+        </mat-form-field>
+
+     
+        <mat-form-field>
+          <input matInput [matDatepicker]="End" placeholder="Sprint End">
+          <mat-datepicker-toggle matSuffix [for]="End"></mat-datepicker-toggle>
+          <mat-datepicker #End></mat-datepicker>
+        </mat-form-field>
+         
+    </div>
+    <div class="col offset-md-3">
+      <app-sprint-dropdown [sprints]="sprint"></app-sprint-dropdown>
+    </div>
+
+  </div>
+
+</div>

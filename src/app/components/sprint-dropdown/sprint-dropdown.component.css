@@ -1,0 +1,9 @@
+
+mat-option:hover{
+    color: white;
+    background-color: tomato;
+}
+
+mat-select{
+    width:fit-content;
+}
