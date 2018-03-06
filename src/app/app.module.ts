@@ -13,9 +13,17 @@ import { MatNativeDateModule } from "@angular/material";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { SprintDetailsComponent } from "./components/sprint-details/sprint-details.component";
 
+import { AppComponent } from './app.component';
+import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
+import { MaterialDesignModule } from './material-design/material-design.module';
+
+
 @NgModule({
   declarations: [AppComponent, SprintDropdownComponent, SprintDetailsComponent],
+    TopNavigationComponent
   imports: [
+    BrowserModule,
+    MaterialDesignModule,
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
