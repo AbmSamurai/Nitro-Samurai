@@ -13,8 +13,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { CdkTableModule } from '@angular/cdk/table';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
-import {ErrorStateMatcher} from '@angular/material/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -37,12 +39,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     CdkTableModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule, ReactiveFormsModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatButtonModule
     // ShowOnDirtyErrorStateMatcher
     
     
   ],
-  providers: [{provide: ErrorStateMatcher}],
+  providers: [ErrorStateMatcher],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
