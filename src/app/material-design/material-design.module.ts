@@ -4,7 +4,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatToolbarModule,MatTabsModule,MatIconModule} from '@angular/material';
+
 
 @NgModule({
   imports: [CommonModule, MatToolbarModule],
@@ -14,6 +15,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule
+    MatTabsModule,
+    MatIconModule,
+  ],
+  exports:[
+    MatToolbarModule,
+    MatTabsModule,
+    MatIconModule,
   ]
 })
 export class MaterialDesignModule {}

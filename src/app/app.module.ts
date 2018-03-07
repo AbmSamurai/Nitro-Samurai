@@ -11,11 +11,19 @@ import { SprintDropdownComponent } from "./components/sprint-dropdown/sprint-dro
 import { SprintDetailsComponent } from "./components/sprint-details/sprint-details.component";
 import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {RouterModule} from '@angular/router';
+import { TeamViewComponent } from './components/team-view/team-view.component';
+import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    TopNavigationComponent,
+    TeamViewComponent,
+    BottomNavigationComponent
     SprintDropdownComponent,
     SprintDetailsComponent,
     TopNavigationComponent
@@ -28,8 +36,7 @@ import { MaterialDesignModule } from './material-design/material-design.module';
     AmChartsModule,
     BrowserAnimationsModule,
     MaterialDesignModule,
-     FormsModule,
-    ReactiveFormsModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
