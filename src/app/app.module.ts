@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { AmChartsModule } from '@amcharts/amcharts3-angular'
+// import { AmChartsModule } from '@amcharts/amcharts3-angular'
 import { environment } from '../environments/environment';
 import { LoginRegisterComponent } from './login-register/login-register.component';
 import { LoginComponent } from './Login-Register/login/login.component';
@@ -17,13 +17,24 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
+import { MaterialDesignModule } from './material-design/material-design.module';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {RouterModule} from '@angular/router';
+import { TeamViewComponent } from './components/team-view/team-view.component';
+import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginRegisterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    TopNavigationComponent,
+    TeamViewComponent,
+    BottomNavigationComponent
   ],
 
   // exports: [CdkTableModule,
@@ -33,7 +44,7 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AmChartsModule,
+    // AmChartsModule,
     BrowserAnimationsModule,
     MatTabsModule,
     CdkTableModule,
@@ -42,10 +53,13 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule, 
     ReactiveFormsModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
     // ShowOnDirtyErrorStateMatcher
     
     
+    // BrowserAnimationsModule,
+    MaterialDesignModule,
+    RouterModule,
   ],
   providers: [ErrorStateMatcher],
   bootstrap: [AppComponent]
