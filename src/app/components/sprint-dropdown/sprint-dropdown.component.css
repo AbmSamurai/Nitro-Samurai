@@ -7,3 +7,10 @@ mat-option:hover{
 mat-select{
     width:fit-content;
 }
+
+mat-option{
+    overflow: auto;
+}
+mat-form-field {
+  width: 100%;
+}

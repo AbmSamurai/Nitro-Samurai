@@ -1,14 +1,16 @@
 
-ul{
-    list-style: none;
-}
-
 mat-form-field{
     width:100%;
 }
 
 ._headings{
-    font-weight: bold;
+    font-weight: bolder;
     font-size: large;
     padding: 25px;
+}
+.margin-top-101{
+    margin-top:100px ;
+}
+a{
+    text-decoration: none;
 }
