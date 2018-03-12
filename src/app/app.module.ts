@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import { TeamViewComponent } from './components/team-view/team-view.component';
 import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
+import { CardComponent } from './components/card/card.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 
@@ -16,7 +18,9 @@ import { BottomNavigationComponent } from './components/bottom-navigation/bottom
     AppComponent,
     TopNavigationComponent,
     TeamViewComponent,
-    BottomNavigationComponent
+    BottomNavigationComponent,
+    CardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
