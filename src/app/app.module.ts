@@ -1,3 +1,4 @@
+import { RouterModuleModule } from './router-module/router-module.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from "angularfire2/firestore";
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,13 +21,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { TeamViewComponent } from './components/team-view/team-view.component';
 import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
 import { CardComponent } from './components/card/card.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-
-
 
 @NgModule({
   declarations: [
@@ -45,6 +44,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   //   MatTabsModule],
 
   imports: [
+    RouterModuleModule,
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

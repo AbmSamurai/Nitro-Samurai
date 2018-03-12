@@ -7,7 +7,7 @@ import { DashboardComponent } from '../components/dashboard/dashboard.component'
 
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'AppComponent', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'home', component: AppComponent },
   { path: 'team-view', component: AppComponent },
   { path: 'login', component: LoginRegisterComponent },
