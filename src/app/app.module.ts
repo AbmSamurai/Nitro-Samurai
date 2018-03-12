@@ -23,6 +23,8 @@ import { MaterialDesignModule } from './material-design/material-design.module';
 import {RouterModule} from '@angular/router';
 import { TeamViewComponent } from './components/team-view/team-view.component';
 import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
+import { CardComponent } from './components/card/card.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 
@@ -34,7 +36,9 @@ import { BottomNavigationComponent } from './components/bottom-navigation/bottom
     RegisterComponent,
     TopNavigationComponent,
     TeamViewComponent,
-    BottomNavigationComponent
+    BottomNavigationComponent,
+    CardComponent,
+    DashboardComponent
   ],
 
   // exports: [CdkTableModule,
