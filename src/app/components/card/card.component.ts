@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router/src/router';
+import { Router } from '@angular/router';
+import { Team } from '../../models/Team';
 
 @Component({
   selector: 'app-card',
@@ -17,7 +18,7 @@ export class CardComponent implements OnInit {
   
     ngOnInit() {
       console.log(this.team, "Here on card now");
-      this.team.Picture;
+      // this.team.Picture;
     }
   
     flip() {
@@ -30,7 +31,7 @@ export class CardComponent implements OnInit {
     }
     sendTeam(specifiedTeam) {
       console.log("clicked on this team:", specifiedTeam.Name);
-      this.dbs.SneakedTeam = specifiedTeam;
+      // this.dbs.SneakedTeam = specifiedTeam;
       this.router.navigate(["teamView"]);
     }
 }
