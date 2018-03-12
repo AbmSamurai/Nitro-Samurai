@@ -38,7 +38,7 @@ export class RegisterComponent {
 
   nameFormControl = new FormControl('', [
     Validators.required,
-    Validators.pattern("^[\p{L}\s'.-]+$")
+    Validators.pattern("[A-Za-z]{1,32}")
   ]);
 
   selectFormControl = new FormControl('', [
