@@ -7,7 +7,8 @@ export class Team{
     sprintTotal: number;
     velocity: number;
     teamName: string;
-
+    rating: number;
+    picture: string;
 
     constructor(){
         this.leaders = new Array<User>();
