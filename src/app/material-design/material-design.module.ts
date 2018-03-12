@@ -14,14 +14,10 @@ import {MatToolbarModule,MatTabsModule,MatIconModule} from '@angular/material';
     MatSelectModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
-    MatTabsModule,
+    MatNativeDateModule,
     MatIconModule,
+    MatTabsModule,
+    MatIconModule
   ],
-  exports:[
-    MatToolbarModule,
-    MatTabsModule,
-    MatIconModule,
-  ]
-})
+ })
 export class MaterialDesignModule {}

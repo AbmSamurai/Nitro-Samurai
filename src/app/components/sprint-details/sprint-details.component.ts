@@ -30,8 +30,8 @@ export class SprintDetailsComponent implements OnInit {
           Validators.pattern('^[1-9]*$')
         ])
       ],
-      Start: [null, Validators.compose([Validators.required])],
-      End: [null, Validators.compose([Validators.required])]
+      Start: [{disabled:true}, Validators.compose([Validators.required])],
+      End: [{disabled:true}, Validators.compose([Validators.required])]
     });
 
     console.log(this.sprintForm)
