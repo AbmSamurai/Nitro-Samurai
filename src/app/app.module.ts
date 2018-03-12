@@ -4,6 +4,11 @@ import { AngularFirestoreModule } from "angularfire2/firestore";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireAuth } from 'angularfire2/Auth/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFirestore } from 'angularfire2/firestore';
+
 import { AppComponent } from './app.component';
 // import { AmChartsModule } from '@amcharts/amcharts3-angular'
 import { environment } from '../environments/environment';
@@ -26,6 +31,20 @@ import { TeamViewComponent } from './components/team-view/team-view.component';
 import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
 import { CardComponent } from './components/card/card.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DatabaseService } from './services/database.service';
+import { AuthenticationService } from './services/authentication.service';
+
+
+
+var config = {
+  apiKey: "AIzaSyBl_nMxgOQh4fCkixstzYpvEWVhs4WC7og",
+  authDomain: "nitro-samurai.firebaseapp.com",
+  databaseURL: "https://nitro-samurai.firebaseio.com",
+  projectId: "nitro-samurai",
+  storageBucket: "nitro-samurai.appspot.com",
+  messagingSenderId: "870754973021"
+};
+
 
 @NgModule({
   declarations: [
@@ -63,9 +82,15 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     
     // BrowserAnimationsModule,
     MaterialDesignModule,
-    RouterModule,
+    RouterModule, 
+    AngularFireModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,   
   ],
-  providers: [ErrorStateMatcher],
+  providers: [ErrorStateMatcher,AngularFireAuth,DatabaseService,AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
