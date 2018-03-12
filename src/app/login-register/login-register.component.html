@@ -1,23 +1,24 @@
 
-<div class = "row">
-  <div class = "col-md-4">
-  </div>
+<body class = "background">
 
-  <div class = "col-md-4">
+  <mat-toolbar class = "background">
+    <mat-toolbar-row>
+        <span style="color: white">Nitro-Samurai</span>
+      </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class = "col-md-4 container_div"> 
       <mat-tab-group> 
-          <mat-tab label="Login">
-            <br><br>
-            <app-login></app-login>
-          </mat-tab>
-          <mat-tab label="Register">
-            <br><br>
-            <app-register></app-register>
-          </mat-tab>
-        </mat-tab-group>
+        <mat-tab label="Login">
+          <br><br>
+          <app-login></app-login>
+        </mat-tab>
+        <mat-tab label="Register">
+          <br><br>
+          <app-register></app-register>
+        </mat-tab>
+      </mat-tab-group>
   </div>
-
-  <div class = "col-md-4">
-  </div>
-</div>
-
  
+
+</body> 

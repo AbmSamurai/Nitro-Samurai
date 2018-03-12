@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 /* @import '~@angular/material/prebuilt-themes/indigo-pink.css.css'; */
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
 body{
     margin:0px !important;
@@ -10,7 +11,8 @@ mat-ink-bar{
 }
 
 .mat-tab-label, .mat-tab-label-active{
-    background: #1A237E !important;
+    /* background: #1A237E !important; */
+    width: 50%;
    
 }
 
