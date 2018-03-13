@@ -9,6 +9,8 @@ import { AmChartsService, AmChart } from '@amcharts/amcharts3-angular';
 export class BurndownChartComponent implements OnInit {
  
   private chart:AmChart;
+  
+
   constructor(private AmCharts: AmChartsService) {}
 
   ngOnInit() {

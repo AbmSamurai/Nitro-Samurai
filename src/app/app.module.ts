@@ -1,3 +1,4 @@
+import { routes } from './router-module/router-module.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AngularFireModule } from "angularfire2";
 import { AngularFirestoreModule } from "angularfire2/firestore";
@@ -37,7 +38,8 @@ import { BurndownChartComponent } from './components/burndown-chart/burndown-cha
     AmChartsModule,
     BrowserAnimationsModule,
     MaterialDesignModule,
-    RouterModule,FormsModule,ReactiveFormsModule
+    RouterModule.forRoot(routes)
+    ,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
