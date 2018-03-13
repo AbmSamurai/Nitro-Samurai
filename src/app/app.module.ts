@@ -14,6 +14,7 @@ import { MaterialDesignModule } from './material-design/material-design.module';
 import {RouterModule} from '@angular/router';
 import { TeamViewComponent } from './components/team-view/team-view.component';
 import { BottomNavigationComponent } from './components/bottom-navigation/bottom-navigation.component';
+import { BurndownChartComponent } from './components/burndown-chart/burndown-chart.component';
 
 
 
@@ -25,7 +26,8 @@ import { BottomNavigationComponent } from './components/bottom-navigation/bottom
     BottomNavigationComponent,
     SprintDropdownComponent,
     SprintDetailsComponent,
-    TopNavigationComponent
+    TopNavigationComponent,
+    BurndownChartComponent
   ],
 
   imports: [
